@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: sans-serif;
 }
 
 body {
@@ -10,7 +10,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f7f7f7;
+  background: linear-gradient(90deg, #ffeb3b 21%, #2196f3 83%);
+
 }
 
 main {
@@ -19,27 +20,76 @@ main {
   gap: 5px;
 }
 
-h1 {
+h1,h3,h6 {
   text-align: center;
+  font-style: italic;
+}
+
+h5{
+  text-align: center;
+}
+
+.currentPlayer{
+  text-align: center;
+  padding-top: 1rem;
+  font-size: x-large;
 }
 
 hr {
   font-weight: bold;
   height: 3px;
-  background: black;
-  margin-bottom: 10px;
+  background: white;
+  margin-bottom: 2px;
+  margin-top: 10px;
 }
 
+/*Div da tabela com 3 colunas*/
 .game {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+
+}
+
+/*CSS dos botões*/
+.game button {
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 50px;
+  background: #f7f7f7;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .game button {
   width: 100px;
   height: 100px;
-  margin: 5px;
+  margin: 4px;
   cursor: pointer;
   font-size: 50px;
   background: #f7f7f7;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.game button{
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 50px;
+  background: #f7f7f7;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.game button:hover {
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 50px;
+  background: rgb(203, 203, 203);
 }

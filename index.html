@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Jogo da idosa!</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
   <main>
-    <h1>JOGO DA VELHA</h1>
-    <hr />
+    <hr/>
+    <h1>JOGO DA IDOSA!</h1>
+    <h3>Módulo 4</h3>
+    <h6>Jogo feito por: Lívia Bonotto</h6>
+    <hr/>
+    <h5 style="color: rgba(255, 255, 0, 0.637);"><br>LED Amarelo = X</h5>
+    <h5 style="color: blue">LED Azul = O</h5>
     <div class="game">
+    <!--Um número para identificar cada botão -->
       <button data-i="1"></button>
       <button data-i="2"></button>
       <button data-i="3"></button>
@@ -22,7 +29,15 @@
       <button data-i="8"></button>
       <button data-i="9"></button>
     </div>
+    <!--Indicar qual o próximo jogador -->
     <h2 class="currentPlayer"></h2>
+
+    <hr/>
+    <br>
+    <h6>Enquanto for a vez do jogador X jogar, o LED amarelo ficará acesso.</h6>
+    <h6>Enquanto for a vez do jogador O jogar, o LED azul ficará acesso.</h6>
+    <h6>Quando alguém vencer, seu LED correspondente acenderá e piscará.</h6>
+    <h6>Quando houver empate, ambos os LEDs acendem e piscam.</h6>
   </main>
   <script src="script.js"></script>
 </body>
