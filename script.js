@@ -1,5 +1,5 @@
 //Definindo a URL, que será o IP da conexão com o WiFi
-let url = "http://10.254.16.192/";
+let url = "http://10.254.17.146/";
 
 //Pegando a div que mostrará o jogador atual
 const currentPlayer = document.querySelector(".currentPlayer");
@@ -24,7 +24,17 @@ let positions = [
 
 //Função para iniciar o jogo
 function init() {
+
+    //Array que irá guardar a sequência de inputs (X ou O)
     selected = [];
+
+    //Quando a array estiver vazia, deixamos o background do botão em branco
+    //Dessa forma, quando o jogo acabar, as cores serão "zeradas"
+    if (selected.length === 0){
+      document.querySelectorAll(".game button").forEach((item) => {
+      item.style.backgroundColor = "white";
+    });
+    }
 
     //Mostrando o primeiro jogador
     currentPlayer.innerHTML = `Jogador da vez: ${player}`;
@@ -35,6 +45,7 @@ function init() {
         item.innerHTML = "";
         item.addEventListener("click", newMove);
     });
+
 
     //Ajax que manda a requisição de jogador atual da rodada 
     if (player == "X"){
@@ -47,20 +58,11 @@ function init() {
         url: url + "turnO",
       })
     }
+
 }
 
 //Iniciando a função init() quando abrimos o arquivo
 init();
-
-
-function color(){
-  button = document.querySelectorAll(".game button");
-  if (button == "O"){
-    button.style.color = "red";
-  };
-
-  console.log(button);
-}
 
 
 //Função de novo movimento, que recebe como parâmetro o evento referente ao botão
@@ -85,6 +87,16 @@ function newMove(e) {
     player = player === "X" ? "O" : "X";
     currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
 
+    button = e.target;
+    if (button.innerHTML === "O"){
+      button.style.color = "blue";
+      button.style.backgroundColor = "#a6d5fa"
+    }
+    else if (button.innerHTML === "X"){
+      button.style.color = "#ffc107";
+      button.style.backgroundColor = "#ffffb2";
+    }
+  
     //Ajax que manda a requisição de jogador atual da rodada 
     if (player == "X"){
       $.ajax({
@@ -97,7 +109,7 @@ function newMove(e) {
       })
     }
 
-}
+};
 
 // Faz a checagem para caso de X ou O vencer ou empate
 function check() {
