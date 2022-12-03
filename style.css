@@ -55,29 +55,7 @@ hr {
 .game button {
   width: 100px;
   height: 100px;
-  margin: 4px;
-  cursor: pointer;
-  font-size: 50px;
-  background: #f7f7f7;
-  border-radius: 0.5rem;
-  border: none;
-}
-
-.game button {
-  width: 100px;
-  height: 100px;
-  margin: 4px;
-  cursor: pointer;
-  font-size: 50px;
-  background: #f7f7f7;
-  border-radius: 0.5rem;
-  border: none;
-}
-
-.game button{
-  width: 100px;
-  height: 100px;
-  margin: 4px;
+  margin: 3px;
   cursor: pointer;
   font-size: 50px;
   background: #f7f7f7;
@@ -88,7 +66,7 @@ hr {
 .game button:hover {
   width: 100px;
   height: 100px;
-  margin: 4px;
+  margin: 3px;
   cursor: pointer;
   font-size: 50px;
   background: rgb(203, 203, 203);
