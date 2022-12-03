@@ -37,7 +37,7 @@ function init() {
     }
 
     //Mostrando o primeiro jogador
-    currentPlayer.innerHTML = `Jogador da vez: ${player}`;
+    currentPlayer.innerHTML = `É a vez do ${player} jogar!!`;
 
     //Para cada botão da tabela, ele começa vazio
     //A cada clique, chamamos a função newMove
@@ -85,8 +85,9 @@ function newMove(e) {
     //Trocando o player a cada movimento
     //Se tiver X selecionado, vai ser O, se não vai ser O
     player = player === "X" ? "O" : "X";
-    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+    currentPlayer.innerHTML = `É a vez do ${player} jogar!!`;
 
+    //Definindo estilo para X e O
     button = e.target;
     if (button.innerHTML === "O"){
       button.style.color = "blue";
